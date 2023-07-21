@@ -19,5 +19,4 @@ socket.on('new message', function (data) {
     $chat.append(data + '<br/>');
 });
 
-
 })

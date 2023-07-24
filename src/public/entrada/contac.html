@@ -110,15 +110,23 @@
       </div>
 <div class="pasiado">
       <div class="d-flex justify-content-center">
-      <form class="form">
+      <form action="https://formsubmit.co/0f9cb63348f5c2c1bd521d677d190fd6" method="POST" class="form">
         <div class="title">Contact us</div>
-        <input type="text" placeholder="Your name" class="input">
-        <input type="text" placeholder="Your email" class="input">
-        <input type="number" placeholder="Your number" class="input">
-        <textarea placeholder="Your message"></textarea>
-        <button>Submit</button>
-        </form>
+
+        <input name="nombre" type="text" placeholder="Your name" class="input">
+
+        <input name="email" type="email" placeholder="Your email" class="input">
+
+        <input name="numero" type="number" placeholder="Your number" class="input">
+
+        <textarea name="mensaje" placeholder="Your message"></textarea>
+
+        <button type="submit" value="Enviar">Enviar</button>
+        <input type="hidden" name="_next" value="http://localhost:3000/entrada/contac.html">
+        <input type="hidden" name="_captcha" value="false">
         </div>
+        </form>
+        
 </div>
 <!-- Formulario para el contacto con la empresa -->
 

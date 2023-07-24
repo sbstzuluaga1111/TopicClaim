@@ -1,0 +1,27 @@
+Nombre del proyecto: TopicClaim
+
+Descripcion:
+Este proyecto trata de generar una plataaforma digital que ayude a promocionar a las pequeñas, medianas y grandes empresas.Juntarlas en un ambiente virtual
+como una red social donde cada empresas tendra su espacio de publicaciones de nuevos productos, su catalogo que ofrece y mas..
+todo ciendo visible para los clientes y que podra ser compartido. 
+A su vez podran las empresas encontrar mas variedad de provedores que les facilitara en la produccion o prestacion del servicio.
+esta plataforma va enfocado tanto pa las empresas y consumidores de un a manera comercial buscando unir empresas y a personas atravez de esta red social.
+
+
+Objetivo:
+Reducir el coste de las materias primas al encontrar altenativas mas economicas, 
+
+dar a conocer esas pequeñas empresas que buscan hacerse un lugar en el mercado,
+
+Que el consumidor conosca mas a fondo el repertorio de empresas que tiene para ofrecer sus productos o servicios,
+
+generar un espacio multi publicidad de las empresas dando a conocer sus novedades,
+
+reducir los altos costos en los productos o servicios y aumentando su calidad y cantidad,
+
+competitividad en tre las empresas para que ofresacan mejores ofertas ya que no serian los unicos en el negocio conocidos.
+
+Contenido:
+
+una plataforma que pueda publicar estados y chats con logings para distintos usuarios para que se hablen entre si.
+y demas apartados que faciliten las busquedas entre la plataforma.

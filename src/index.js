@@ -7,7 +7,6 @@ const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
 
-
 app.set('port', process.env.PORT || 3000);
 
 require('./sockets')(io);

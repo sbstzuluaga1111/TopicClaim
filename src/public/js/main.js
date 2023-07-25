@@ -6,6 +6,7 @@ const $messageBox = $('#message');
 const $chat = $('#chat');
 
 
+
 $messageForm.submit( e =>{
 
 e.preventDefault();

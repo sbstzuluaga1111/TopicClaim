@@ -141,7 +141,7 @@ body{
   }
 
   .card2 {
-    width: 100%;
+    width: 500px;
     height: 400px;
     background-color: rgb(255, 255, 255);
     border-radius: 8px;
@@ -150,15 +150,10 @@ body{
     align-items: center;
     justify-content: center;
     padding: 20px 30px;
-    gap: 13px;
-    position: relative;
-    overflow: hidden;
     box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.062);
   }
   
-  .contentHome{
-    margin-top: 200px;
-    margin-left: 25%;
-    margin-right: 25%;
-    width: 50%;
+
+  .epad{
+    margin-top: 50px !important;
   }

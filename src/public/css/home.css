@@ -1,3 +1,8 @@
+body{
+  background-color: #BDE3FF !important;
+}
+
+
 .card1 {
     width: 260px;
     background-color: #000000 !important;
@@ -87,4 +92,73 @@
   
   .card:active {
     transform: scale(0.95) rotateZ(1.7deg);
+  }
+
+  .button1 {
+    background: #BDE3FF;
+    border: none;
+    padding: 10px 20px;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 600;
+    width: 180px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transform: skew(-21deg);
+  }
+  
+  span {
+    display: inline-block;
+    transform: skew(21deg);
+  }
+  
+  .button1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 100%;
+    left: 0;
+    background: rgb(20, 20, 20);
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.5s;
+  }
+  
+  .button1:hover {
+    color: #fff !important;
+  }
+  
+  .button1:hover::before {
+    left: 0;
+    right: 0;
+    opacity: 1;
+  }
+
+  a{
+    text-decoration: none !important;
+    color: black !important;
+  }
+
+  .card2 {
+    width: 100%;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 30px;
+    gap: 13px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.062);
+  }
+  
+  .contentHome{
+    margin-top: 200px;
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%;
   }

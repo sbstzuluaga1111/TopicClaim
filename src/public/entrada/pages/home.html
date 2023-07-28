@@ -23,8 +23,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <!-- links importantes de archivos complementos -->
 
-    
-
 </head>
 <body>
 
@@ -32,27 +30,24 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-center">
   <a href="../../index.html" style="text-align: center;" class="button1"><span>Loging Out</span></a>
 </nav>
-<!-- nav -->
+<!-- nav --> 
 
-
-
-
-  
-
-
+<!-- contenido general -->
 <div class="d-flex justify-content-center epad" >
  <div class="row container" >
   <div class="col-4">
     <div id="list-example" class="list-group">
+
+      <!-- movimiento en el panel -->
       <a class="list-group-item list-group-item-action" href="#list-item-1">Item 1</a>
-      <a class="list-group-item list-group-item-action" href="#list-item-2">Item 2</a>
-      <a class="list-group-item list-group-item-action" href="#list-item-3">Item 3</a>
-      <a class="list-group-item list-group-item-action" href="#list-item-4">Item 4</a>
+      <!-- movimiento en el panel -->
+
     </div>
   </div>
   <div class="col-8">
     <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
       
+      <!-- panel de publicaciones -->
       <div class="d-flex justify-content-center contentHome">
         <div class="row">
       <div id="list-item-1" class="card2 epad">
@@ -62,53 +57,31 @@
       </div>
         </div>
       </div>
-     
-      <p><div class="d-flex justify-content-center contentHome">
-        <div class="row">
-      <div id="list-item-2" class="card2 epad">
-        <img src="../../img/telefono-movil.png" width="10%">
-        <h1>publicacion</h1>
-        <button class="btn btn-primary">Mas informacion</button>
-      </div>
-        </div>
-      </div></p>
-  
-      <p><div class="d-flex justify-content-center contentHome">
-        <div class="row">
-      <div id="list-item-3" class="card2 epad">
-        <img src="../../img/telefono-movil.png" width="10%">
-        <h1>publicacion</h1>
-        <button class="btn btn-primary">Mas informacion</button>
-      </div>
-        </div>
-      </div></p>
-      
-      <p><div class="d-flex justify-content-center contentHome">
-        <div class="row">
-      <div id="list-item-4" class="card2 epad">
-        <img src="../../img/telefono-movil.png" width="10%">
-        <h1>publicacion</h1>
-        <button class="btn btn-primary">Mas informacion</button>
-      </div>
-        </div>
-      </div></p>
+      <!-- panel de publicaciones -->
+
     </div>
   </div>
 </div>
+<!-- contenido general -->
 
-
-
+<!-- chat -->
     <div class="d-flex justify-content-end align-items-end" style="position: fixed; bottom: 50px; right: 50px;">
-    <div data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" class="chat-header card1">Chat</div>
-    </div>
-
-      <div class="collapse" id="collapseExample">
-      <div class="d-flex justify-content-end">
-      <div style="position: fixed; bottom: 100px; right: 50px;" class="card1">
       
-            <div class="chat-window">
+    <div data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" class="chat-header card1">Chat</div>
+    
+    </div>
+    <ul class="message-list col-3" style="background-color: cornflowerblue; height: 50%; margin: 5%;">
+    <div id="userName"></div>
+    </ul>
+      <div class="collapse" id="collapseExample">
+        
+      <div class="d-flex justify-content-end">
+          <div id="chetos" style="position: fixed; bottom: 100px; right: 50px;" class="card1">
+            
+            <div  class="chat-window">
               <ul id="chat" class="message-list"></ul>
-            </div>
+              <ul class="message-list col-3" style="background-color: cornflowerblue;">a</ul>
+            </div>   
             <form id="message-form" class="chat-input">
                 <input id="message" type="text" class="message-input" placeholder="Type your message here">
                 <button class="send-button">Send</button>
@@ -116,29 +89,14 @@
           </div>
     </div>
     </div>
-
+<!-- chat -->
 
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 <script src="/socket.io/socket.io.js"></script>
 <script src="../../js/main.js" charset="utf-8"></script>
 <script src="../../js/animaciones.js" charset="utf-8"></script>
+
 </body>
 </html>

@@ -10,7 +10,8 @@
           <link rel="stylesheet" href="/css/ingreso.css">
           <link rel="shortcut icon" href="../img/telefono-movil.png">
           <script src="/socket.io/socket.io.js"></script>
-          <script src="/js/main.js" charset="utf-8"></script>
+          <script src="../js/main.js" charset="utf-8"></script>
+          <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
           <!-- links importantes de archivos locales -->
       
           <title>Ingreso-Cliente</title>
@@ -83,9 +84,9 @@
                 <li></li>
         </ul>
   </div >
-  
+  <form id="ingresoC">
   <div class="d-flex justify-content-center cardton">
-    <form class="form_container">
+    <div class="form_container">
       <div class="logo_container d-flex justify-content-center align-items-center">
         <img src="../img/telefono-movil.png" width="50px">
       </div>
@@ -94,6 +95,7 @@
         <span class="subtitle">Get started with our app, just create an account and enjoy the experience.</span>
       </div>
       <br>
+      <p id="errorLogin"></p>
       <div class="input_container">
         <label class="input_label" for="email_field">Email</label>
         <svg fill="none" viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg" class="icon">
@@ -102,7 +104,7 @@
         </svg>
         <input placeholder="name@mail.com" title="Inpit title" name="input-name" type="text" class="input_field" id="email_field">
       </div>
-      <div class="input_container">
+      <div  class="input_container">
         <label class="input_label" for="password_field">Password</label>
         <svg fill="none" viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg" class="icon">
           <path stroke-linecap="round" stroke-width="1.5" stroke="#141B34" d="M18 11.0041C17.4166 9.91704 16.273 9.15775 14.9519 9.0993C13.477 9.03404 11.9788 9 10.329 9C8.67911 9 7.18091 9.03404 5.70604 9.0993C3.95328 9.17685 2.51295 10.4881 2.27882 12.1618C2.12602 13.2541 2 14.3734 2 15.5134C2 16.6534 2.12602 17.7727 2.27882 18.865C2.51295 20.5387 3.95328 21.8499 5.70604 21.9275C6.42013 21.9591 7.26041 21.9834 8 22"></path>
@@ -111,10 +113,11 @@
         </svg>
         <input placeholder="Password" title="Inpit title" name="input-name" type="password" class="input_field" id="password_field">
       </div>
-      
-        <a title="Sign In" type="submit" class="sign-in_btn honee" href="pages/home.html">Ingresar</a>
-    
-    
+      <div class="sign-in_btn honee">
+        <button title="Sign In" type="submit" class="sign-in_btn honee">Ingresar</button>
+      </div>
+      </form>
+<!-- href="pages/home.html" -->
       <div class="separator">
         <hr class="line">
         <span>Or</span>
@@ -142,7 +145,7 @@
         <span>Registrar</span>
       </button>
       <p class="note">Terms of use &amp; Conditions</p>
-    </form>
+    </div>
   </div>
   </div>
 

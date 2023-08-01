@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/css/home.css">
     <link rel="stylesheet" href="/css/darkMode.css">
     <link rel="shortcut icon" href="../../img/telefono-movil.png">
+    <script src="../../js/main.js"></script>
    
     <title>Document</title>
     <!-- links importantes de archivos locales -->
@@ -70,8 +71,13 @@
     <div data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" class="chat-header card1">Chat</div>
     
     </div>
+    
     <ul class="message-list col-3" style="background-color: cornflowerblue; height: 50%; margin: 5%;">
-    <div id="userName"></div>
+      
+    <div>
+      <ul id="usernames">
+      <p></p>
+      </ul>
     </ul>
       <div class="collapse" id="collapseExample">
         
@@ -80,7 +86,6 @@
             
             <div  class="chat-window">
               <ul id="chat" class="message-list"></ul>
-              <ul class="message-list col-3" style="background-color: cornflowerblue;">a</ul>
             </div>   
             <form id="message-form" class="chat-input">
                 <input id="message" type="text" class="message-input" placeholder="Type your message here">

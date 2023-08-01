@@ -1,31 +1,22 @@
-$(function() {
+$(function () {
     const socket = io();
 
 const $messageForm = $('#message-form');
 const $messageBox = $('#message');
 const $chat = $('#chat');
 
+const $ingresoC = $('#ingresoC');
+const $email_field = $('#email_field');
+const $password_field = $('#password_field');
+const $usernames = $('#usernames');
 
-
-const $registroForm = $('#Regis');
-const $error = $('#errorRegis');
-
-const $nameUser = $('#name_field');
-const $emailUser = $('#email_field');
-const $password = $('#password_field');
-
-const $listado = $('#userName')
-
-
-
-$registroForm.submit(e => {
-socket.emit('newUser', $nameUser.val(), data => {
-
-    }); 
+$ingresoC.submit(e => {
+  e.preventDefault(); // Evita el comportamiento predeterminado del envío del formulario
+  console.log('enviando..');
 });
 
 
-
+const $errorLogin = $('#errorLogin');
 
 
 $messageForm.submit( e =>{

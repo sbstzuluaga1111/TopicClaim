@@ -1,7 +1,9 @@
 body{
+  background-color: #ffffff !important;
+}
+.navoar{
   background-color: #BDE3FF !important;
 }
-
 
 .card1 {
     width: 260px;
@@ -13,7 +15,7 @@ body{
   
   .chat-header {
     background-color: #333;
-    color: #fff;
+    color: #BDE3FF;
     padding: 10px;
     font-size: 18px;
     border-top-left-radius: 5px;
@@ -95,7 +97,7 @@ body{
   }
 
   .button1 {
-    background: #BDE3FF;
+    background:rgb(20, 20, 20);
     border: none;
     padding: 10px 20px;
     display: inline-block;
@@ -105,6 +107,7 @@ body{
     text-transform: uppercase;
     cursor: pointer;
     transform: skew(-21deg);
+    color: white !important;
   }
   
   span {
@@ -119,14 +122,15 @@ body{
     bottom: 0;
     right: 100%;
     left: 0;
-    background: rgb(20, 20, 20);
+    background:  #FFCD29;
     opacity: 0;
     z-index: -1;
     transition: all 0.5s;
+    
   }
   
   .button1:hover {
-    color: #fff !important;
+    color: #000000 !important;
   }
   
   .button1:hover::before {

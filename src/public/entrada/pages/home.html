@@ -28,47 +28,67 @@
 <body>
 
 <!-- nav -->
-<nav class="navbar navoar ">
-  <div class="d-flex justify-content-center" style="position: relative; left: 50%;">
-<div class="container d-flex justify-content-center align-items-center" style="border-radius: 5%; margin-right: 50%; position: relative; left: 0px; top: 0px; right: 0px; bottom: 0%;">
-  <img class="marginNav" src="../../img/HatchfulExport-All/logo.png" width="80px">
- </div>
-  <div  class="d-flex justify-content-end container align-items-center" style="margin-left: 50%;">
-    <a href="../../index.html" style="text-align: center;" class="button1"><span>Loging Out</span></a>
-  </div></div>
+<nav class="navbar navoar d-flex justify-content-center">
+  <div class="d-flex justify-content-around align-items-center container">
+  <a class="button3 m-2">
+      <div class="d-flex justify-content-center  align-items-center ">Publicar</div>
+      <svg width="34" height="34" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="37" cy="37" r="35.5" stroke="black" stroke-width="3"></circle>
+          <path d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z" fill="black"></path>
+      </svg>
+  </a>
+  <img class="marginNav m-2" src="../../img/HatchfulExport-All/logo.png" style="border-radius: 10%;" width="80px">
+  <a href="../../index.html" style="text-align: center;" class="button1 m-2"><span>Loging Out</span></a>
+  </div>
 </nav>
 <!-- nav --> 
-
+ 
 <!-- contenido general -->
 <div class="d-flex justify-content-center epad" >
  <div class="row container" >
-  <div class="col-4">
+  <div class="col-3">
     <div id="list-example" class="list-group">
 
       <!-- movimiento en el panel -->
       <a class="list-group-item list-group-item-action" href="#list-item-1">Item 1</a>
       <!-- movimiento en el panel -->
 
+<!-- contenido general de las publicaciones -->     
     </div>
   </div>
-  <div class="col-8">
+  <div class="col-9">
     <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
-      
-      <!-- panel de publicaciones -->
-      <div class="d-flex justify-content-center contentHome">
-        <div class="row">
+      <div class=" d-flex justify-content-center contentHome">
+        <div class="row m-3">
+          <!-- panel de publicaciones -->
       <div id="list-item-1" class="card2 epad">
-        <img src="../../img/telefono-movil.png" width="10%">
+        <img src="../../img/HatchfulExport-All/logo.png" width="10%">
         <h1>publicacion</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate nesciunt consequuntur delectus eum 
+          dicta eos deserunt ex! Autem sequi odio quidem maxime 
+          facere repellendus, ipsam rem quo natus cupiditate nesciunt! lo
+        </p>
         <button class="btn btn-primary">Mas informacion</button>
       </div>
+      <div id="list-item-1" class="card2 epad">
+        <img src="../../img/HatchfulExport-All/logo.png" width="10%">
+        <h1>publicacion</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate nesciunt consequuntur delectus eum 
+          dicta eos deserunt ex! Autem sequi odio quidem maxime 
+          facere repellendus, ipsam rem quo natus cupiditate nesciunt! lo
+        </p>
+        <button class="btn btn-primary">Mas informacion</button>
+      </div>
+      
+        <!-- panel de publicaciones -->
         </div>
       </div>
-      <!-- panel de publicaciones -->
-
     </div>
   </div>
 </div>
+<!-- contenido general de las publicaciones -->  
 <!-- contenido general -->
 
 <!-- chat -->
@@ -103,7 +123,75 @@
 <!-- chat -->
 
 </div>
-
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-light text-muted">
+ 
+</section>
+<section class="">
+  <div class="container text-center text-md-start mt-5">
+    <div class="row mt-3">
+      <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+        <h6 class="text-uppercase fw-bold mb-4">
+          <i class="fas fa-gem me-3"></i>Company name
+        </h6>
+        <p>
+          Here you can use rows and columns to organize your footer content. Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit.
+        </p>
+      </div>
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+        <h6 class="text-uppercase fw-bold mb-4">
+          Products
+        </h6>
+        <p>
+          <a href="#!" class="text-reset">Angular</a>
+        </p>
+        <p>
+          <a href="#!" class="text-reset">React</a>
+        </p>
+        <p>
+          <a href="#!" class="text-reset">Vue</a>
+        </p>
+        <p>
+          <a href="#!" class="text-reset">Laravel</a>
+        </p>
+      </div>
+      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+        <h6 class="text-uppercase fw-bold mb-4">
+          Useful links
+        </h6>
+        <p>
+          <a href="#!" class="text-reset">Pricing</a>
+        </p>
+        <p>
+          <a href="#!" class="text-reset">Settings</a>
+        </p>
+        <p>
+          <a href="#!" class="text-reset">Orders</a>
+        </p>
+        <p>
+          <a href="#!" class="text-reset">Help</a>
+        </p>
+      </div>
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+        <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+        <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+        <p>
+          <i class="fas fa-envelope me-3"></i>
+          info@example.com
+        </p>
+        <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+        <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+  © 2021 Copyright:
+  <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+</div>
+</footer>
+<!-- Footer -->
 <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 <script src="/socket.io/socket.io.js"></script>
 <script src="../../js/main.js" charset="utf-8"></script>

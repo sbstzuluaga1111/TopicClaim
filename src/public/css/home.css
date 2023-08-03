@@ -5,6 +5,11 @@ body{
   background-color: #BDE3FF !important;
 }
 
+.contentHome{
+  background-color:#FFCD29 !important;
+  border-radius: 1%;
+}
+
 .card1 {
     width: 260px;
     background-color: #000000 !important;
@@ -160,4 +165,42 @@ body{
 
   .epad{
     margin-top: 50px !important;
+    font-size: 90% !important;
   }
+
+  .button3 {
+    cursor: pointer;
+    font-weight: 700;
+    font-family: Helvetica,"sans-serif";
+    transition: all .2s;
+    padding: 10px 20px;
+    border-radius: 100px;
+    background: #FFCD29;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+  }
+  
+  .button3:hover {
+    background: #000000;
+    color: #ffffff !important;
+  }
+  
+  .button3 > svg {
+    width: 34px;
+    margin-left: 10px;
+    transition: transform .3s ease-in-out;
+  }
+  
+  .button3:hover svg {
+    transform: translateX(5px);
+    background-color: #ffffff !important;
+    border-radius: 100%;
+  }
+  
+  .button3:active {
+    transform: scale(0.95);
+  }
+  
+  

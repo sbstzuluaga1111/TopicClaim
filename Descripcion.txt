@@ -25,3 +25,12 @@ Contenido:
 
 una plataforma que pueda publicar estados y chats con logings para distintos usuarios para que se hablen entre si.
 y demas apartados que faciliten las busquedas entre la plataforma.
+
+
+Requerimientos:
+
+Loging funcional
+
+Chat para los Usuarios
+
+Publicacion de estados o novedades en la plataforma

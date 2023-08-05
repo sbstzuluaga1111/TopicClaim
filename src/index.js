@@ -1,18 +1,15 @@
 const http = require('http');
 const path = require('path');
-const express = require('express');
+const app = require('./server');
 const socketio = require('socket.io');
-
-const app = express();
+const express = require('express');
+const dotenv = require('dotenv').config();
 
 const server = http.createServer(app);
 const io = socketio(server);
 
-app.set('port', process.env.PORT || 3000);
-
 require('./sockets')(io);
-
-app.use(express.static(path.join(__dirname, 'public')));
+require('./database');
 
 server.listen(app.get('port'), () => {
     console.log('El servidor se inició en el puerto ',app.get('port'));

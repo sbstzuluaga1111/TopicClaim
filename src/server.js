@@ -11,9 +11,8 @@ app.use(express.static(path.join(__dirname, 'views')));
 
 app.use(express.urlencoded({ extended: false }));
 
-app.get('/', (req, res) =>{
-    res.send('hello world')
-});
+app.use(require('./routes/index.routes'));
+app.use(require('./routes/publicacion.routes'));
 
 app.use(express.static(path.join(__dirname, 'public')));
 

@@ -14,6 +14,7 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(require('./routes/index.routes'));
 app.use(require('./routes/publicacion.routes'));
+app.use(require('./routes/usuarios.routes'));
 
 app.use(express.static(path.join(__dirname, 'public')));
 

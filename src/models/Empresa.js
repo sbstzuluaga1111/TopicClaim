@@ -3,13 +3,13 @@ const bcrypt = require('bcryptjs'); // Importar bcryptjs
 
 const { Schema } = mongoose;
 
-const UserSchema = new Schema({
+const EmpresaSchema = new Schema({
   email: { type: String, required: true, unique: true},
   password: { type: String, required: true },
 });
 
-// Antes de guardar el usuario, ciframos la contraseña
-UserSchema.pre('save', async function(next) {
+// Antes de guardar la empresa, ciframos la contraseña
+EmpresaSchema.pre('save', async function(next) {
   if (!this.isModified('password')) return next();
 
   const salt = await bcrypt.genSalt(10);
@@ -18,4 +18,4 @@ UserSchema.pre('save', async function(next) {
   next();
 });
 
-module.exports = mongoose.model('User', UserSchema);
+module.exports = mongoose.model('Empresa', EmpresaSchema);

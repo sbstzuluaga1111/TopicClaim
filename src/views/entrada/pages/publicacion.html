@@ -43,23 +43,21 @@
   </div>
 </nav>
 <!-- nav --> 
- 
+ <!-- formulario --> 
 <div class="d-flex justify-content-center m-5 container">
 
     <div class="contact-form">
         <h2>Publicacion</h2>
-        <form>
+        <form action="/public/add" method="POST">
           <label for="name">Titulo:</label>
-          <input type="text" required="">
+          <input name="titulo" type="text" required="">
           <label for="message">Mensage a publicar:</label>
-          <textarea id="message" name="message" required=""></textarea>
-          <button type="submit">Submit</button>
+          <textarea id="message" name="descripcion" required=""></textarea>
+          <button type="submit">Publicar</button>
         </form>
       </div>
-      
-
 </div>
-
+ <!-- formulario --> 
 
 <!-- chat -->
     <div class="d-flex justify-content-end align-items-end" style="position: fixed; bottom: 50px; right: 50px;">

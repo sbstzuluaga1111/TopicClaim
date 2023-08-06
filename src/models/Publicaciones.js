@@ -1,6 +1,6 @@
-const {Shema, model} = require('mongoose');
+const {Schema, model} = require('mongoose');
 
-const NoteShema = new Shema({
+const PublicShema = new Schema({
     titulo:{
         type: String,
         required: true
@@ -14,4 +14,4 @@ const NoteShema = new Shema({
     timestamps: true
 })
 
-module.exports = model('Note', NoteShema)
+module.exports = model('Public', PublicShema)

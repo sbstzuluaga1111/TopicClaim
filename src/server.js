@@ -13,7 +13,6 @@ app.use(express.static(path.join(__dirname, 'views')));
 app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: false }));
 
-// Configura express-session antes de passport.session()
 app.use(session({
     secret: 'your-secret-key',
     resave: false,

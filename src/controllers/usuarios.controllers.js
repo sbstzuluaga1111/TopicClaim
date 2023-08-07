@@ -2,28 +2,31 @@ const path = require('path');
 const User = require('../models/User');
 const Empresa = require('../models/Empresa');
 const passport = require('passport');
+const { MongoError } = require('mongoose');
 const usersCtrl = {};
 
-//registro como usuario
+//registro usuario
 usersCtrl.renderRegisU = (req, res) =>{
     const contacPath = path.join(__dirname, '..','views','entrada','registro-Consumidor.html');
     res.sendFile(contacPath);
 }
 
-// Registro como usuario
+
 usersCtrl.initRegisU = async (req, res) => {
-    const { email, password } = req.body;
+  const { email, password } = req.body;
 
-    // Crear una instancia de usuario
-    const newUser = new User({ email, password });
+  try {
+      const newUser = new User({ email, password });
+      await newUser.encryptPassword(password);
+      await newUser.save();
+      return res.redirect('/?success=true');
+  } catch (error) {
+      return res.redirect(`/registro/usuario?error=${encodeURIComponent('El usuario ya se encuentra registrado')}`);
+  }
+};
 
-    // Cifrar la contraseña y luego guardar
-    await newUser.encryptPassword(password); // Pasa la contraseña al método
-    await newUser.save();
 
-    // Redireccionar a la página de inicio
-    res.redirect('/');
-}
+
 
 
 //registro empresa
@@ -32,22 +35,17 @@ usersCtrl.renderRegisE = (req, res) =>{
     res.sendFile(contacPath);
 }
 
-// Registro empresa
 usersCtrl.initRegisE = async (req, res) => {
-    const { email, password } = req.body;
-
-    // Crear una instancia de empresa
-    const newEmpres = new Empresa({ email, password });
-
-    // Cifrar la contraseña y luego guardar
-    await newEmpres.encryptPassword(password); // Pasa la contraseña al método
-    await newEmpres.save();
-
-    // Redireccionar a la página de inicio
-    res.redirect('/');
+  const { email, password } = req.body;
+  try {
+      const newEmpres = new Empresa({ email, password });
+      await newEmpres.encryptPassword(password);
+      await newEmpres.save();
+      return res.redirect('/?success=true');
+  } catch (error) {
+      return res.redirect(`/registro/empresa?error=${encodeURIComponent('El usuario ya se encuentra registrado')}`);
+  }
 }
-
-
 
 
 
@@ -62,12 +60,12 @@ usersCtrl.renderIngreU = (req, res) =>{
 }
 
 usersCtrl.initIngreU = (req, res, next) => {
-    passport.authenticate('logingU', (err, user, info) => {
+    passport.authenticate('logingU', (err, user) => {
       if (err) {
         return next(err);
       }
       if (!user) {
-        return res.redirect('/?loginError=true'); // Agrega ?loginError=true a la URL
+        return res.redirect('/?loginError=true');
       }
       req.logIn(user, (err) => {
         if (err) {
@@ -86,21 +84,22 @@ usersCtrl.renderIngreE = (req, res) =>{
 }
 
 usersCtrl.initIngreE = (req, res, next) => {
-    passport.authenticate('logingE', (err, user, info) => {
+  passport.authenticate('logingE', (err, empres) => {
+    if (err) {
+      return next(err);
+    }
+    if (!empres) {
+      return res.redirect('/?loginError=true'); 
+    }
+    req.logIn(empres, (err) => {
       if (err) {
         return next(err);
       }
-      if (!user) {
-        return res.redirect('/?loginError=true'); // Agrega ?loginError=true a la URL
-      }
-      req.logIn(user, (err) => {
-        if (err) {
-          return next(err);
-        }
-        return res.redirect('/publics');
-      });
-    })(req, res, next);
-  };
+      return res.redirect('/publics');
+    });
+  })(req, res, next);
+};
+
 
 usersCtrl.fuera = (req, res) => {
     req.logout(function(err) {
@@ -109,7 +108,7 @@ usersCtrl.fuera = (req, res) => {
         return next(err);
       }
       res.clearCookie('connect.sid');
-      res.redirect('/?logout=true'); // Agrega ?logout=true a la URL
+      res.redirect('/?logout=true');
     });
   };
 

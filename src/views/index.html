@@ -106,20 +106,24 @@
 
 
 <script>
-  // Verifica si el parámetro logout está presente en la URL
   const urlParams = new URLSearchParams(window.location.search);
   if (urlParams.has('logout') && urlParams.get('logout') === 'true') {
-    // Muestra el alert indicando que se cerró la sesión
     alert('¡Tu sesión ha sido cerrada!');
+    window.history.replaceState({}, document.title, '/');
   }
+</script>
+<script>
+    const urlParamss = new URLSearchParams(window.location.search);
+    if (urlParams.has('loginError') && urlParams.get('loginError') === 'true') {
+      alert('¡Tus credenciales no coinciden con la base de datos!');
+      
+    }
 </script>
 
 <script>
-  // Verifica si el parámetro loginError está presente en la URL
-  const urlParamsa = new URLSearchParams(window.location.search);
-  if (urlParamsa.has('loginError') && urlParamsa.get('loginError') === 'true') {
-    // Muestra el alert indicando que las credenciales no coinciden
-    alert('¡Tus credenciales no coinciden con la base de datos!');
+  if (window.location.search.includes('success=true')) {
+      alert('Registro exitoso');
+      window.history.replaceState({}, document.title, '/');
   }
 </script>
 

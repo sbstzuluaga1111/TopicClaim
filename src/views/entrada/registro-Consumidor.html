@@ -68,6 +68,18 @@
 
 
 
+ <script>
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+
+  if (urlParams.get('error')) {
+      alert(decodeURIComponent(urlParams.get('error')));
+  } else if (urlParams.get('success')) {
+      alert('Registro exitoso');
+  }
+</script>
+
+
 
 <div class="context">
   

@@ -1,21 +1,20 @@
 const mongoose = require('mongoose');
-const bcrypt = require('bcryptjs'); // Importar bcryptjs
+const bcrypt = require('bcryptjs');
 
 const { Schema } = mongoose;
 
 const EmpresaSchema = new Schema({
-  email: { type: String, required: true, unique: true},
+  email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
 });
 
-// Antes de guardar la empresa, ciframos la contraseña
-EmpresaSchema.pre('save', async function(next) {
-  if (!this.isModified('password')) return next();
-
+EmpresaSchema.methods.encryptPassword = async function (password) {
   const salt = await bcrypt.genSalt(10);
-  this.password = await bcrypt.hash(this.password, salt);
+  this.password = await bcrypt.hash(password, salt);
+};
 
-  next();
-});
+EmpresaSchema.methods.matchPassword = async function (password) {
+  return await bcrypt.compare(password, this.password);
+};
 
 module.exports = mongoose.model('Empresa', EmpresaSchema);

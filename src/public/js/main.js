@@ -33,3 +33,20 @@ socket.on('new message', function (data) {
 });
 
 })
+
+
+const logoutButton = document.getElementById('logout-button'); // Reemplaza 'logout-button' con el ID real
+
+logoutButton.addEventListener('click', async () => {
+  try {
+    const response = await fetch('/logout', { method: 'POST' });
+    const data = await response.json();
+    
+    if (data.message === 'logged out') {
+      alert('Logged out');
+      window.location.href = '/'; // Redirige al inicio después de cerrar sesión
+    }
+  } catch (error) {
+    console.error('Error:', error);
+  }
+});

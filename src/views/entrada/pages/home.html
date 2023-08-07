@@ -75,34 +75,32 @@
 
 <!-- chat -->
     <div class="d-flex justify-content-end align-items-end" style="position: fixed; bottom: 50px; right: 50px;">
-      
     <div data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" class="chat-header card1">Chat</div>
-    
     </div>
-    
     <ul class="message-list col-3" style="background-color: cornflowerblue; height: 50%; margin: 5%;">
-      
     <div>
       <ul id="usernames">
-      <p></p>
+        <p id="user-email"></p>
       </ul>
     </ul>
       <div class="collapse" id="collapseExample">
-        
       <div class="d-flex justify-content-end">
-          <div id="chetos" style="position: fixed; bottom: 100px; right: 50px;" class="card1">
+          <div style="position: fixed; bottom: 100px; right: 50px;" class="card1">
             
             <div  class="chat-window">
               <ul id="chat" class="message-list"></ul>
             </div>   
             <form id="message-form" class="chat-input">
                 <input id="message" type="text" class="message-input" placeholder="Type your message here">
-                <button class="send-button">Send</button>
+                <button type="submit" class="send-button">Send</button>
             </form>
           </div>
     </div>
     </div>
 <!-- chat -->
+
+
+
 
 </div>
 <!-- Footer -->
@@ -175,7 +173,7 @@
   </footer>
   <!-- Footer -->
 <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-<script src="/socket.io/socket.io.js"></script>
+<script src="/socket.io/socket.io.js" charset="utf-8"></script>
 <script src="../../js/main.js" charset="utf-8"></script>
 <script src="../../js/animaciones.js" charset="utf-8"></script>
 

@@ -1,6 +1,7 @@
 module.exports = function (io){
+
     io.on('connection', socket => {
-        console.log('conexión exitosa');
+        console.log('Usuario conectado');
 
         socket.on('send message', function (data){
             io.sockets.emit('new message', data);
@@ -8,3 +9,4 @@ module.exports = function (io){
 
     });
 }
+

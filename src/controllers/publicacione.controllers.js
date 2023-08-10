@@ -30,6 +30,20 @@ publicCtrl.rendersPublicsForm = async (req, res) => {
     }
 };
 
+publicCtrl.rendersPublicsForms = async (req, res) => {
+    try {
+        const publics = await Public.find();
+        const filePath = path.join(__dirname, '..', 'views', 'entrada', 'pages', 'homeU.html');
+
+        const data = await fs.readFile(filePath, 'utf8');
+        const modifiedData = data.replace('{{publics}}', generatePublicsHTML(publics));
+
+        res.send(modifiedData);
+    } catch (err) {
+        res.status(500).send('Error interno del servidor');
+    }
+};
+
 
 function generatePublicsHTML(publics) {
     let html = '';

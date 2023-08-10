@@ -6,5 +6,6 @@ const {isAuthenticated} = require('../helpers/auth');
 router.get('/public', isAuthenticated, publicCtrl.renderPublicForm);
 router.post('/public/add', isAuthenticated ,publicCtrl.createPublicForm);
 router.get('/publics', isAuthenticated, publicCtrl.rendersPublicsForm);
+router.get('/publicss', isAuthenticated, publicCtrl.rendersPublicsForms);
 
 module.exports = router;

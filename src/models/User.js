@@ -4,8 +4,14 @@ const bcrypt = require('bcryptjs');
 const { Schema } = mongoose;
 
 const UserSchema = new Schema({
-  email: { type: String, required: true, unique: true },
-  password: { type: String, required: true },
+  email: { 
+    type: String, 
+    required: true, 
+    unique: true },
+    
+  password: { 
+    type: String, 
+    required: true },
 });
 
 UserSchema.methods.encryptPassword = async function (password) {

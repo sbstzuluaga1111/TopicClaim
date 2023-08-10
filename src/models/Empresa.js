@@ -4,8 +4,14 @@ const bcrypt = require('bcryptjs');
 const { Schema } = mongoose;
 
 const EmpresaSchema = new Schema({
-  email: { type: String, required: true, unique: true },
-  password: { type: String, required: true },
+  email: { 
+    type: String, 
+    required: true, 
+    unique: true },
+
+  password: { 
+    type: String, 
+    required: true },
 });
 
 EmpresaSchema.methods.encryptPassword = async function (password) {

@@ -71,7 +71,7 @@ usersCtrl.initIngreU = (req, res, next) => {
         if (err) {
           return next(err);
         }
-        return res.redirect('/publics');
+        return res.redirect('/publicss');
       });
     })(req, res, next);
   };
